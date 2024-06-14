@@ -6,23 +6,49 @@
 }
 
 header {
-  background-color: #333; /* Choose your desired background color */
-  color: white; /* Choose your desired text color */
-  padding: 10px; /* Adjust padding as needed */
-  text-align: center; /* Center align the text */
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-ExtreBold.woff2') format('woff2');
+  font-weight: bold;
+  font-size: normal;
+  background-color: rgb(34,26,14); /* Choose your desired background color */
+  color: rgb(34,26,14); /* Choose your desired text color */
   height: fit-content;
+  top: 20px;
+  left: 30px;
+  /* button for resume page */
+  a {
+
+    button {
+      background-color: #221a0e;
+      border-radius: 10px;
+      border: #f5deb3;
+      color: wheat;
+      padding: 7.5px 16px;
+      text-align: center;
+      text-decoration: #C2A383;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bolder;
+
+    }
+    
+    button:hover {
+      background-color: wheat;
+      color: rgb(34,26,14);
+    }
+  }
 }
 
 body {
   /*font and background color of the website*/
   font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
   background-color: rgb(34,26,14);
-  color: #C2A383;
+  color: wheat;
 
-  /* Dropdown Button */
+  /* Dropdown Button ***LOCATED IN HEADER!!!!***/
   .dropbtn {
-    background-color: #17795d;
-    color: white;
+    background-color: rgb(34,26,14);
+    color: wheat;
     padding: 12%;
     font-size: 16px;
     border: none;
@@ -30,7 +56,8 @@ body {
 
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #054d38;
+    background-color: wheat;
+    color: #C2A383
   }
 
   /* The container <div> - needed to position the dropdown content */
@@ -50,7 +77,7 @@ body {
 
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: #C2A383;
+    color: wheat;
     background-color: rgb(34,26,14);
     font-size: xx-large;
     padding: 12px 16px;
@@ -59,21 +86,24 @@ body {
   }
 
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: wheat;}
+  .dropdown-content a:hover {
+    color: #C2A383;
+    background-color: wheat;
+  }
 
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {
     display:block;
   }
+
   /*BOTTOM MENU BAR*/
   .menu_bar {
+    /*display: none;*/
     border: none;
     text-decoration: none;
     column-width: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 20px;
+
   }
   .menu_bar a {
     text-decoration: none;
@@ -82,25 +112,28 @@ body {
   /* hover the bottom menu */
   .menu_bar a:hover {
     border: none;
-    text-decoration: none;
-    color: white; 
+    background-color: rgb(34,26,14);
   }
 
   /* for the github button */
-  a {
-    button {
-      background-color: #C2A383;
-      border-radius: 10px;
-      border: wheat;
-      color: #98676A;
-      padding: 7.5px 16px;
-      text-align: center;
-      text-decoration: #C2A383;
-      display: inline-block;
-      font-size: 16px;
-      font-weight: bolder;
-    }
+  .toTop {
+    display: none;
+    position: fixed;
+    bottom: 20px; /* Place the button 20px from the bottom */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99;
+    background-color: wheat;
+    border-radius: 10px;
+    border: wheat;
+    color: #98676A;
+    padding: 7.5px 16px;
+    text-align: center;
+    text-decoration: #C2A383;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
   }
+
 
 /* I like this color as well #C2A383 and #98676A and #7E5053 */
 }
