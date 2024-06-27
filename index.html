@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
     <!--Possibly may want to dimsantle CSS into multiple documents for easier reading-->
     <!--Header Info, File Referance-->
     <head>
+        <title>Alexander Baronsky</title>
         <link rel="stylesheet" href="style.CSS">
-        <link rel="manageAnimation" href="main.js">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
     </head> 
-    <!--TOP OF PAGE: Hamburger Menu-->
-    <header>
-        <nav>
-            <div class="dropdown">
+
+    <!--BOTTOM OF PAGE: Website Information and Interactive Links-->
+    <body>
+            <!--TOP OF PAGE: Hamburger Menu-->
+        <header>
+            <section class="dropdown">
                 <button onclick="toggleMenu()" class="dropbtn">Menu</button>
                 <nav id="Dropdown" class="dropdown-content">
                     <a href="#about">About Me</a>
-                    <a href="#current">Current News</a>
-                    <a href="#contact">Contact Info</a>
+                    <a href="current.html">Current News</a>
+                    <a href="contact.html">Contact Info</a>
                     <a href="#projects">Past Projects</a>
                     <a href="#skills">Skills</a>
                     <a href="resume.html">Resume</a>
                     <!--Make a link to and back from a seperate html previewing Resmue-->
                 </nav>
-            </div>
-        </nav>
-    </header>
-    <!--BOTTOM OF PAGE: Website Information and Interactive Links-->
-    <body>
-        <center>
-            <h1 class="profile_title">Alexander Baronsky</h1><!--Maybe leftmost past menu/next to profile picture-->
-            <article class="#about">
-                An alumni of SUNY Albany from the class of 2024. I graduated with seperate degrees in B.S. in Computer Science,
-                Physics and a minor in Mathmatics.
-            </article>
-            <article style="padding: 75%;">
-                hello world
-            </article>
+            </section>
+        </header>
+        <pre>
+            <section class="site-content"> 
+                <h1 class="profile_title">Alexander Baronsky</h1><!--Maybe leftmost past menu/next to profile picture-->
+                <article class="about">
+                    <h1>About Me</h1>
+                    <p> About me Blurb</p>
+                </article>
+                <article class="skills">
+                    <h1>Skills and Experiance</h1>
+                </article>
+            </section>
+        </pre>
+
             <!--BottomMenu links-->
-            <ul class="menu_bar" id="showLinks">
-                <nav>
-                    <a href="https://www.instagram.com/alex_baronsky/">
-                        <img src="images/instagram.svg"alt=Instagram></img>
-                    </a>
-                    <a href="https://twitter.com/ABaronsky">
-                        <img src="images/twitterx.svg"alt=Twitter></img>
-                    </a>
-                    <a href="https://github.com/ABaronCode/">
-                        <img src="images/github.svg"alt=GitHub></img>
-                    </a>
-                    <a href="https://www.linkedin.com/in/alexander-baronsky/"></li>
-                        <img src="images/linkedin.svg"alt=Linkdln></img>
-                    </a>
-                    <a href="https://discord.gg/KThhHzkHp3">                  
-                        <img src="images/discord.svg"alt=Discord></img>
-                    </a>
-                    <!--TO TOP ARROW
-                    <a href="#">Top                   
-                        <img src=""alt=Top></img>
-                    </a>-->
-                </nav>
-            </ul>
-        </center>
-        <!--Add a top of page button?-->
+            <footer>
+                <ul class="menu_bar" id="showLinks">
+                    <nav>
+                        <a href="https://www.instagram.com/alex_baronsky/">
+                            <img src="images/instagram.svg"alt=Instagram></img>
+                        </a>
+                        <a href="https://twitter.com/ABaronsky">
+                            <img src="images/twitterx.svg"alt=Twitter></img>
+                        </a>
+                        <a href="https://github.com/ABaronCode/">
+                            <img src="images/github.svg"alt=GitHub></img>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexander-baronsky/"></li>
+                            <img src="images/linkedin.svg"alt=Linkdln></img>
+                        </a>
+                        <a href="https://discord.gg/KThhHzkHp3">                  
+                            <img src="images/discord.svg"alt=Discord></img>
+                        </a>
+                        <!--TO TOP ARROW
+                        <a href="#">Top                   
+                            <img src=""alt=Top></img>
+                        </a>-->
+                    </nav>
+                </ul>
+            </footer>
+        <!--To the top button!-->
         <button onclick="topFunction()" class="toTop" id="goUp">
             <img src="images/BrownArrow.svg" width="25" height="25" alt="To Top of Page"></img>
         </button> 
-        <script src="main.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
