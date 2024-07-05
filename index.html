@@ -1,47 +1,105 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <!--Possibly may want to dimsantle CSS into multiple documents for easier reading-->
-    <!--Header Info, File Referance-->
     <head>
         <title>Alexander Baronsky</title>
         <link rel="stylesheet" href="style.CSS">
         <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
+        <script defer src="script.js"></script>
     </head> 
 
-    <!--BOTTOM OF PAGE: Website Information and Interactive Links-->
     <body>
-            <!--TOP OF PAGE: Hamburger Menu-->
         <header>
+            <!--TOP OF PAGE: Hamburger Menu-->
             <section class="dropdown">
-                <button onclick="toggleMenu()" class="dropbtn">Menu</button>
+                <button onclick="toggleMenu()" class="dropbtn" type="button">
+                    <img src="images/threeMenu.svg" class="jsButton" width= "15" height= "15" alt="menu_icon"></img>
+                </button>
                 <nav id="Dropdown" class="dropdown-content">
                     <a href="#about">About Me</a>
-                    <a href="current.html">Current News</a>
-                    <a href="contact.html">Contact Info</a>
-                    <a href="#projects">Past Projects</a>
                     <a href="#skills">Skills</a>
+                    <a href="timeline.html">Timeline</a>
                     <a href="resume.html">Resume</a>
-                    <!--Make a link to and back from a seperate html previewing Resmue-->
                 </nav>
             </section>
+            <a href="contact.html">
+                <button class="contact-info" type="button" >Contact Me!</button>
+            </a>
         </header>
-        <pre>
             <section class="site-content"> 
+                <img class="profileIMGTwo" src="images/profileIMGTwo.jpg" alt="Profile Image: Selfie"></img>
                 <h1 class="profile_title">Alexander Baronsky</h1><!--Maybe leftmost past menu/next to profile picture-->
-                <article class="about">
-                    <h1>About Me</h1>
-                    <p> About me Blurb</p>
-                </article>
-                <article class="skills">
-                    <h1>Skills and Experiance</h1>
-                </article>
-            </section>
-        </pre>
+                <!--hidden is to animated the article boxes with JS/not working atm-->
+                <section class="hidden" id="hide">
+                    <article class="about" id="about">
+                        <h1>Who am I?</h1>
+                        <p>
+                            Hello! I am a recent graduate of the State University of New York(SUNY) at Albany. My education there has provided a unique background in which I will use to find innovative ideas to solve current tech challenges.
+                        </p>
+                        <p>
+                            I am an avid reader. My favorite books are mostly science fiction and fantasy. Right now I am diving into the Lord of the Rings trilogy. Another of my passions is music, I have been playing the violin since grade school! Also, I am self teaching myself the electric guitar. Something I had to put on hold given how heavy my academic load was the last few years. In addition to reading and music, I swim and enjoy running along the trails throughout the Finger Lakes Region.                        </p>
 
-            <!--BottomMenu links-->
-            <footer>
-                <ul class="menu_bar" id="showLinks">
+                        </p>
+                    </article>
+                </section>
+                <section class="hidden" id="hide">
+                    <center>
+                        <figure>
+                            <img class="profileIMG" src="images/walkingAway.jpeg" alt="Profile IMG: Walking"></img>
+                            <img class="profileIMG" src="images/telescope.jpg" alt="Profile IMG: Telescope">
+                        <figcaption style="font-size:0.8em">Left photo is of the Albany Skywalk at night, Right is me taking off the protective covers for the Mees Telescope</figcaption>
+                        </figure>
+                    </center>
+                </section>
+                <div class="sep"></div>
+                <section class="hidden" id="hide">
+                    <article class="skills" id="skills">
+                        <h1>Skills</h1>
+                        <center><!--odd image adjustment issues in css-->
+                            <img class="lang" src="images/java.svg" alt="Java img"></img>
+                            <img class="lang" src="images/python.svg" alt="Python img"></img>
+                            <img class="lang" src="images/C.svg" alt="C img"></img>
+                            <img class="lang" src="images/CPP.svg" alt="CPP img"></img>
+                            <img class="lang" src="images/Matlab_Logo.png" alt="MatLab img"></img>
+                            <img class="lang" src="images/html.svg" alt="MatLab img"></img>
+                            <img class="lang" src="images/css.svg" alt="MatLab img"></img>
+                            <img class="lang" src="images/JS.svg" alt="Python img"></img>
+                            <img class="lang" src="images/racket-logo.svg" alt="SQL img"></img>
+                        </center>
+                        <p>
+                            Operating Systems I use on a daily basis: MacOS, iOS, Windows 10/11 and Android.
+                        </p>
+                    </article>
+                </section>
+                <section class="hidden" id="hide">
+                    <article class="about">
+                        <h1>What I am working on now: </h1>
+                        <p>
+                            My current personal project is a physics engine to simulate interactions between rigid body objects. I am writing this project in C++, and while only in the initial stages. I have had a lot of fun applying physics into a digital environment.
+                        </p>
+                    </article>
+                </section>
+                <section class="hidden" id="hide">
+                    <article class="skills">
+                        <h1>Personal Note: </h1>
+                        <p>
+                            This website was built on the back of self-learning! With dozens of online tutorials, videos and articles. I built this website as a demonstration of understanding and desire to continue learning outside of university. If you have any comments or suggestions please reach out!
+                        </p>
+                        <p>
+                            Thank You for Visiting!
+                        </p>
+                    </article>
+                </section>
+            </section>
+
+             <!--To the top button!-->
+             <button onclick="topFunction()" class="to-top" id="go-up">
+                <img src="images/BrownArrow.svg" width="25" height="25" alt="To Top of Page"></img>
+            </button> 
+
+            <!--BOTTOM OF PAGE: Website Information and Interactive Links ****Need to adjust for iOS*****-->
+            <footer class="footer">
+                <ul class="bottom-bar" id="showLinks">
                     <nav>
                         <a href="https://www.instagram.com/alex_baronsky/">
                             <img src="images/instagram.svg"alt=Instagram></img>
@@ -58,17 +116,8 @@
                         <a href="https://discord.gg/KThhHzkHp3">                  
                             <img src="images/discord.svg"alt=Discord></img>
                         </a>
-                        <!--TO TOP ARROW
-                        <a href="#">Top                   
-                            <img src=""alt=Top></img>
-                        </a>-->
                     </nav>
                 </ul>
             </footer>
-        <!--To the top button!-->
-        <button onclick="topFunction()" class="toTop" id="goUp">
-            <img src="images/BrownArrow.svg" width="25" height="25" alt="To Top of Page"></img>
-        </button> 
-        <script src="script.js"></script>
     </body>
 </html>

@@ -3,52 +3,29 @@
     <head>
         <link rel="stylesheet" href="style.CSS">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="script.js"></script>
     </head> 
-    <!--Head Back to main page button-->
-    <!--Display HTML DOCUMENT HERE-->
     <body>
         <header>
             <section class="dropdown">
-                <button onclick="toggleMenu()" class="dropbtn">Menu</button>
+                <button onclick="toggleMenu()" class="dropbtn" type="button">
+                    <img src="images/threeMenu.svg" class="jsButton" width= "15" height= "15" alt="menu_icon"></img>
+                </button>
                 <nav id="Dropdown" class="dropdown-content">
                     <a href="index.html#about">About Me</a>
-                    <a href="current.html">Current News</a>
-                    <a href="contact.html">Contact Info</a>
-                    <a href="#projects">Past Projects</a>
                     <a href="index.html#skills">Skills</a>
-                    <!--Make a link to and back from a seperate html previewing Resmue-->
+                    <a href="contact.html">Contact Info</a>
+                    <a href="timeline.html">Timeline</a>
                 </nav>
             </section>
+            <!--Head Back to main page button-->
             <a href="index.html">
-                <button class="go-home" type="button" >Alexander Baronsky</button>
+                <button class="go-home" type="button">
+                    <img src="images/home.svg" width="15" height="15" alt="Home"></img>
+                </button>
             </a>
         </header>
-        <center>
-            <h2>Resume</h2>
-            <iframe class="iframeResume" id="pdf" src="Baronsky-Alexander-Resume.pdf"></iframe>
-            <ul class="menu_bar">
-                <nav>
-                    <a href="https://www.instagram.com/alex_baronsky/">
-                        <img src="images/instagram.svg"alt=Instagram></img>
-                    </a>
-                    <a href="https://twitter.com/ABaronsky">
-                        <img src="images/twitterx.svg"alt=Twitter></img>
-                    </a>
-                    <a href="https://github.com/ABaronCode/">
-                        <img src="images/github.svg"alt=GitHub></img>
-                    </a>
-                    <a href="https://www.linkedin.com/in/alexander-baronsky/"></li>
-                        <img src="images/linkedin.svg"alt=Linkdln></img>
-                    </a>
-                    <a href="https://discord.gg/KThhHzkHp3">                  
-                        <img src="images/discord.svg"alt=Discord></img>
-                    </a>
-                    <!--TO TOP ARROW
-                    <a href="#">Top                   
-                        <img src=""alt=Top></img>
-                    </a>-->
-                </nav>
-            </ul>
-        </center>
-        <script src="script.js"></script>
+        <!--Display HTML DOCUMENT HERE, simple, unoptimal centering-->
+        <center><h2 class=" rTitle">Resume</h2></center>
+        <iframe id="myResume" class="Resume" src="Baronsky-Alexander-Resume.pdf" frameborder="0" alt="Issue Displaying, Please download resume to view."></iframe>
     </body>

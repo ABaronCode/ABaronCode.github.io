@@ -1,174 +1,526 @@
+/* A lof of repeated desgins I need to go through and optimize.  */
+
+
 @font-face {
   font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
   src: url('fonts/webfonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
   font-weight: bold;
   font-size: normal;
 }
+/* bottom link animation */
+@keyframes slide {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 2.5px;
+  }
+  100% {
+    bottom: 5px;
+  }
+}
+
+@keyframes lineAnimated {
+  0% { 
+    height: 0; 
+  }
+  100% { 
+    height: 100%;
+  }
+
+}
+@keyframes move {
+  0% { 
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }    
+}
+/* There has to be a better way of doing this... */
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+.container:nth-child(5) {
+  animation-delay: 4s;
+}
+.container:nth-child(6) {
+  animation-delay: 5s;
+}
+.container:nth-child(7) {
+  animation-delay: 6s;
+}
+.container:nth-child(8) {
+  animation-delay: 7s;
+}
+.container:nth-child(9) {
+  animation-delay: 8s;
+}
+.container:nth-child(10) {
+  animation-delay: 9s;
+}
+.container:nth-child(11) {
+  animation-delay: 10s;
+}
+.container:nth-child(12) {
+  animation-delay: 11s;
+}
+.container:nth-child(13) {
+  animation-delay: 12s;
+}
+.container:nth-child(14) {
+  animation-delay: 13s;
+}
+.container:nth-child(15) {
+  animation-delay: 14s;
+}
+
 
 body {
+  max-width: 75%;
+  margin: auto;
   font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
   font-weight: bold;
   font-size: xx-large;
-  background-color: rgb(34,26,14); /* Choose your desired background color */
-  color: wheat; /* Choose your desired text color */
+  background-color: #2F3645; /* Choose your desired background color */
+  color: whitesmoke; /* Choose your desired text color */
   width: display;
-  text-align: left;
+  align-items: center;
   break-inside: display;
   overflow: auto;
 
   header {
     /* button for resume page */
+      border-bottom: solid whitesmoke;
+      padding: 10px;
+      z-index: 99;
+
       .go-home {
+        vertical-align:top;
         float: right;
-        margin-top: 0;
-        background-color: #221a0e;
+        background-color: grey;
+        color: whitesmoke;
+        border: solid whitesmoke;
+        position: relative;
         border-radius: 10px;
-        border: #f5deb3;
-        color: wheat;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bolder;
-        transition-property: background-color;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-        transition-delay: 0s;
-      }   
-      .go-home:hover {
-        background-color: wheat;
-        color: rgb(34,26,14);
+        right: 0.25%;
+        top: 2.5%;
+        padding: 12px 16px;
+        box-shadow: 0px 16px 24px 0px rgba(0,0,0.3,0.3);
       }
-      /* Dropdown Button ***LOCATED IN HEADER!!!!***/
+      
+      .go-home:hover {
+        background-color: #283618;
+        color: whitesmoke;
+      }
+
+      .contact-info {
+        vertical-align: top;
+        float: right;
+        background-color: grey;
+        color: whitesmoke;
+        border: solid whitesmoke;
+        position: relative;
+        border-radius: 10px;
+        right: 0.25%;
+        top: 2.5%;
+        padding: 12px 16px;
+        box-shadow: 0px 16px 24px 0px rgba(0,0,0.3,0.3);
+      }
+      .contact-info:hover {
+        background-color: #283618;
+      }
+
+      /* Dropdown Button ***LOCATED IN HEADER!!!!*** */
       .dropbtn {
-        background-color: rgb(34,26,14);
-        color: wheat;
-        padding: 12%;
-        font-size: 16px;
-        border: none;
+        vertical-align: top;
+        float: left;
+        background-color: grey;
+        color: whitesmoke;
+        border: solid whitesmoke;
+        position: absolute;
+        font-weight: bolder;
+        border-radius: 10px;
+        top: 5%;
+        left: 0.25%;
+        padding: 12px 16px;
+        box-shadow: 0px 16px 24px 0px rgba(0,0,0.3,0.3);
+      }
+      .dropbtn > .jsButton {
+        pointer-events: none;
       }
     
       /* Dropdown button on hover & focus */
       .dropbtn:hover, .dropbtn:focus {
-        background-color: wheat;
-        color: #C2A383
+        background-color: #283618;
+        color: white;
       }
     
       .dropdown {
+        vertical-align: top;
         text-align: left;
+        border-radius: 10px;
+        left: 0.25%;
+        top: 5%;
         position: relative;
+        padding: 12px 16px;
         display: inline-block;
+        z-index: 99;
       }
     
       /* Dropdown Content (Hidden by Default) */
       .dropdown-content {
+        outline: solid whitesmoke;
         display: none;
+        left: 0.25%;
+        top: calc(5% + 42px);
         position: absolute;
         min-width: 200px;
-        box-shadow: 0px 16px 24px 0px rgba(0,0,0,0.9);
-        z-index: 1;
+        box-shadow: rgba(0,0,0.9,0.9);
       }
     
       /* Links inside the dropdown */
       .dropdown-content a {
-        color: wheat;
-        background-color: rgb(34,26,14);
-        font-size: xx-large;
-        padding: 12px 16px;
-        text-decoration: none;
         display: block;
+        position: relative;
+        text-decoration: none;
+        color: white;
+        background-color: #283618;
+        font-size: xx-large;
+        padding: 12px 12px;
+        transition: color 1s ease;
+        z-index: 99;
       }
     
       /* Change color of dropdown links on hover */
       .dropdown-content a:hover {
-        color: #C2A383;
-        background-color: wheat;
+        background-color: darkgrey;
+        border: solid whitesmoke;
+        z-index: 99;
       }
     
       /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
       .show {
-        display:block;
+        /*height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;*/
+        display: inline-block;
       }
   }
 
-  /*BOTTOM MENU BAR*/
-  .menu_bar {
-    /*display: none;*/
-    border: none;
-    text-decoration: none;
-    column-width: auto;
-    bottom: 20px;
+  .profileIMG {
+    margin: 25px;
+    object-position: 75%;
+    padding-top: 40px;
+    width: 40%;
+    height: 50%;
+    display: inline-block;
+  }
+  .profileIMGTwo {
+    width: 200px;
+    height: 200px;
+    clip-path: circle();
+    margin: 20px;
+    display: inline-block;
+    z-index: 0;
+  }
+  .profile_title {
+    background-color: #2F3645;
+    margin: auto;
+    color: #f5f5f5;
     border-radius: 50px;
-    text-align: center;
-  }
-  .menu_bar a {
-    text-decoration: none;
+    display: inline-block;
   }
 
-  /* hover the bottom menu */
-  .menu_bar a:hover {
-    border: none;
-    background-color: rgb(34,26,14);
+  .site-content {
+    /*ANIMATE SLIDE FROM LEFT ON SCROLL ON LOAD*/
+    display: flexbox;
+    overflow-wrap: break-word;
+    margin: auto;
+    color: whitesmoke;
+    min-height: 50vh;
+    box-shadow: rgba(0,0,0.7,0.7);
+
+
+    .about {
+      background-color: #283618;
+      position: relative;
+      text-align: left;
+      border-radius: 10px;
+      font-size: xx-large;
+      font-weight: lighter;
+    }
+    
+    .about h1 {
+      text-decoration: underline;
+      font-weight: bolder;
+      padding: 5px;
+    }
+    
+    .about p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      font-size: large;
+      padding: 20px;
+    }
+
+    .seperator {
+      border-bottom: solid whitesmoke;
+    }
+    /*.hidden {
+      opacity: 75%;
+      transform: translateX(-50%);
+      filter: blur(2px);
+      transition: all 1s;
+    }
+    .clear {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }*/
+    /*#60767A*/
+    .skills {
+      background-color: grey;
+      text-align: left;
+      color: whitesmoke;
+      border-radius: 10px;
+      font-size: xx-large;
+      font-weight: lighter;
+    }
+
+    .skills h1 {
+      text-decoration: underline;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    .skills p {
+      line-break: display;
+      font-size: large;
+      padding: 20px;
+    }
+
+    .skills img {
+      display: flexbox;
+      padding: 20px;
+      height: 150px;
+      width: 150px;
+      margin: auto;
+      background-color: #2F3645;
+    }
   }
 
-  /* for the github button */
-  .toTop {
-    display: none;
+  .Resume {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+
+  /*Time/History*/
+  .container {
+    font-size: 15px;
+    position: relative;
+    padding: 10px 50px;
+    max-width: 37.5%;
+    border-radius: 0%;
+    animation: move 1s linear forwards;
+    opacity: 0;
+  }
+
+  .data {
+    background-color: #283618;
+    border: solid whitesmoke;
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .right-container {
+    left: 55%;
+  }
+  .left-container {
+    left: 0;
+  }
+  .timeline {
+    position: relative;
+    max-width: 75%;
+    margin: 100px auto;
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    background: grey;
+    width: 6px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: lineAnimated 7s linear forwards;
+  }
+
+  @media(prefers-reduced-motion) {
+      /*Time/History*/
+  .container {
+    font-size: 15px;
+    position: relative;
+    padding: 10px 50px;
+    max-width: 37.5%;
+    border-radius: 0%;
+  }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      background: grey;
+      width: 6px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+  }
+
+  .data small {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .data p {
+    font-weight: lighter;
+  }
+  .left-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid gray;
+    right: -50px;
+  }
+  .right-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid gray;
+    left: -50px;
+  }
+  @media screen and (max-width: 600px){
+    .timeline {
+      position: relative;
+      margin: 50px auto;
+    }
+    .timeline::after {
+      position: absolute;
+      left: 0px;
+    }
+    .container {
+      width: 100%;
+      padding-left: 80px;
+      padding-right: 25px;
+    }
+    .data {
+      display: inline-block;
+      font-size: 13px;
+    }
+    .data small {
+      margin-bottom: 10px;
+    }
+    .right-container {
+      left: 0;
+    }
+    .right-arrow, .left-arrow {
+      border-right: 15px solid grey;
+      border-left: 0;
+      left: -15px;
+    }
+
+
+  }
+
+  /*Contact Me Page CSS*/
+  .contact-me {
+    /*font-size: 5v;*/
+    border: solid whitesmoke;
+    background-color: grey;
+    padding: 12px 24px;
+    position: relative;
+    left: 10%;
+    border-radius: 10px;
+  }
+
+  .contact-me:hover{
+      color: darkred;
+  }
+
+  .to-top {
     position: fixed;
     bottom: 20px; /* Place the button 20px from the bottom */
     right: 30px; /* Place the button 30px from the right */
     z-index: 99;
-    background-color: wheat;
+    background-color: grey;
     border-radius: 10px;
-    border: wheat;
-    color: #98676A;
+    border: solid whitesmoke;
     padding: 7.5px 16px;
-    text-align: center;
-    text-decoration: #C2A383;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bolder;
-  }
-  .profile_title {
-    background-color: rgb(34,26,14);
-    color: wheat;
-    border-radius: 50px;
   }
 
-  /*ANIMATE SLIDE FROM LEFT ON SCROLL ON LOAD*/
-  .about {
-      color: wheat;
-      background-color: darkolivegreen;
-      border: solid wheat;
-      border-radius: 25%;
-      font-size: xx-large;
-      font-weight: bold;
+  .to-top:hover {
+    background-color: #283618;
+    box-shadow: 0px 16px 24px 0px rgba(0,0,0.6,0.6);
+  }
+
+  .footer {
+      /*BOTTOM MENU BAR*/
+    position: relative;
+    padding-bottom: 10px;
+    .bottom-bar {
+      /*display: none;*/
+      border: none;
+      text-decoration: none;
+      column-width: auto;
+      bottom: 20px;
       border-radius: 50px;
-  }
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      text-align: center;
+      display: block;
+    }
 
-  .skills {
-    color: wheat;
-    background-color: darkolivegreen;
-    border: solid wheat;
-    border-radius: 25%;
-    font-size: xx-large;
-    font-weight: bold;
-    border-radius: 50px;
-    text-align: left;
-  }
+    .bottom-bar a {
+      text-decoration: none;
+      position: relative;
+      transition: padding 0.1s;
+      right: 25px;
+    }
 
-  .skills p {
-    text-align: left;
-    line-break: display;
+    /* hover the bottom menu */
+    .bottom-bar a:hover {
+      border: none;
+      background-color: none;
+      animation: slide 0.1s linear;
+      animation-fill-mode: forwards;
+    }
   }
- 
-  .site-content {
-    text-align: center;
-  }
-
-  .iframeResume {
-    width: 100%;
-    height: 400px;
-  }
-
-
-/* I like this color as well #C2A383 and #98676A and #7E5053 */
+/* I like this color as well #C2A383 and #98676A and #7E5053 
+Other Colors: #606C38, #283618, #FEFAE0, #DDA15E and #BC6C25
+*/
 }
