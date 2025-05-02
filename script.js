@@ -3,6 +3,9 @@ var iframeResume = document.getElementById("pdf");
 
 
 //Google API call
+
+const visitorCount = 12345;
+
 function displayCount() {
   const visitorCount =  document.getElementById('visitorCounter');
   if (counterElement) {
