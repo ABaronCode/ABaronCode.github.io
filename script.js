@@ -1,6 +1,18 @@
 let topButton = document.getElementById("go-up");
 var iframeResume = document.getElementById("pdf");
 
+
+//Google API call
+function displayCount() {
+  const visitorCount =  document.getElementById('visitorCounter');
+  if (counterElement) {
+    counterElement.textContent = `Visitors: ${visitorCount}`;
+  }
+}
+
+window.addEventListener('load', displayVisitorCount);
+
+
 window.onload = function() {
   initiallyHide();
   // adjust iframe

@@ -218,6 +218,14 @@ body {
         display: inline-block;
       }
   }
+  
+  /*Visitor counter size and placement*/
+  #visitorCounter {
+    font-size: 20px;
+    margin-bottom: 20px;
+    left: 20px;
+  }
+
 
   .profileIMG {
     margin: 25px;
