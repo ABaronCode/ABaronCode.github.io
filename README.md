@@ -17,4 +17,5 @@ Things to focus on:
         2.cool events that I wanted to comment on in stem fields
     -Resume
         1.make the formatting for cell phones work better
-    
+    -folder and code readability in the internal website
+        1.better formatting for code folder and syntax for readability/standard of sites (top folder, comments etc...)
