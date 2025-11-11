@@ -15,7 +15,6 @@ function displayCount() {
 
 window.addEventListener('load', displayVisitorCount);
 
-
 window.onload = function() {
   initiallyHide();
   // adjust iframe
