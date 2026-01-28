@@ -1,12 +1,23 @@
 /* A lof of repeated desgins I need to go through and optimize.  */
-
-
+/*today I learned what a root is and how I can use it as a base for the color scheme */
+/* I looked at some example youtube css files...I know its much more complex, but for real :| */
+/*Base Colors and Fonts*/
+:root {
+  --base-color: white;
+  --base-alternate: ;
+  --text-color: ;
+  --secondary-text: ;
+  --primary-color: ;
+  --accent-Color: ;
+}
+/*font and text data*/
 @font-face {
   font-family: 'JetBrains Mono', Consolas, 'Courier New', monospace;
   src: url('fonts/webfonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
   font-weight: bold;
-  font-size: normal;
+  font-size: normal;  
 }
+
 /* bottom link animation */
 @keyframes slide {
   0% {
